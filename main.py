@@ -31,13 +31,13 @@ def escolhaValida(esc , m) :
         umaLinha()
 
 def hexadecimal(num) :
-'''
+    '''
 
     Ter que pegar o numero dividir por 16 , pegar os restos ate
      o cosciente for indivisivel e inverter a lista , fazendo com que os numeros maiores que 9
       dentro de uma lista vire letras(na minha cabeca faz sentido)
 
-'''
+    '''
     num = float(input("Qual numero deseja Converter : "))
     lst = ()
 
@@ -45,12 +45,12 @@ def hexadecimal(num) :
     id = 0
     while cocien_num != 0 :
         lst = num % 16
-        cocien_num = float(lst(id)) // 16
+        cocien_num = (lst(id)) // 16
+        id += 1
         print(lst)
 
+    lst = lst.sort(reverse=True)
 
-
-    print('passou aqui')
 
 def octadecimal(num) :
     num = int(input("Qual numero deseja Converter : "))
