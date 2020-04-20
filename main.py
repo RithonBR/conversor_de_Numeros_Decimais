@@ -1,3 +1,6 @@
+from typing import List, Any
+
+
 def escolhaDeConversao() :
     print("-" * 29)
     print("Conversor de Numeros Decimais")
@@ -28,7 +31,25 @@ def escolhaValida(esc , m) :
         umaLinha()
 
 def hexadecimal(num) :
-    num = int(input("Qual numero deseja Converter : "))
+'''
+
+    Ter que pegar o numero dividir por 16 , pegar os restos ate
+     o cosciente for indivisivel e inverter a lista , fazendo com que os numeros maiores que 9
+      dentro de uma lista vire letras(na minha cabeca faz sentido)
+
+'''
+    num = float(input("Qual numero deseja Converter : "))
+    lst = ()
+
+    cocien_num = 1
+    id = 0
+    while cocien_num != 0 :
+        lst = num % 16
+        cocien_num = float(lst(id)) // 16
+        print(lst)
+
+
+
     print('passou aqui')
 
 def octadecimal(num) :
@@ -41,19 +62,19 @@ def binario(num) :
 
     print('passou aqui')
 
+def main() :
 
-m = 0
-cnt = 's'
-while cnt == 's' :
+    m = 0
+    cnt = 's'
+    while cnt == 's' :
 
-    escolhaDeConversao()
-    escolha = int(input("Escolha de Sistema : "))
-    umaLinha()
-    escolhaValida(escolha , m)
+        escolhaDeConversao()
+        escolha = int(input("Escolha de Sistema : "))
+        umaLinha()
+        escolhaValida(escolha , m)
+        cnt = input("Deseja Continuar(S/N) : ").lower()
+
+main()
 
 
 
-
-
-
-    cnt = input("Deseja Continuar(S/N) : ").lower()
